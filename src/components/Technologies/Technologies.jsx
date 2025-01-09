@@ -8,6 +8,7 @@ import {
   FaVuejs,
 } from 'react-icons/fa';
 import { SiStyledcomponents } from 'react-icons/si';
+import { TbBrandNextjs } from 'react-icons/tb';
 
 const renderIcon = (IconComponent, color) => {
   return <IconComponent size={40} color={color} />;
@@ -42,19 +43,34 @@ const tech = [
     name: 'VUE',
     logo: () => renderIcon(FaVuejs, '#42B883'),
   },
+  {
+    name: 'Next.js (Estudando)',
+    logo: () => renderIcon(TbBrandNextjs, '#d3d3d3'),
+  },
 ];
 
 export default function Technologies() {
   return (
     <section id="technologies">
-      <div className="card-container">
+      <h1
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+      >
+        Tecnologias
+      </h1>
+      <div className="tech-card">
         {tech.map((item, index) => (
-          <div key={index} className="card">
-            <div className="img-card">
-              {item.logo()} 
-            </div>
-            <div className="description-card">
-              <p className="title">{item.name}</p>
+          <div key={index} className="card" data-aos="zoom-in-up">
+            <div className="content">
+              <div className="img-card" data-aos="flip-down">
+                {item.logo()}
+              </div>
+              <div className="description-card">
+                <p className="title" data-aos="fade-up-left">
+                  {item.name}
+                </p>
+              </div>
             </div>
           </div>
         ))}
