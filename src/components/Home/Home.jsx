@@ -26,7 +26,6 @@ export default function Home() {
         </div>
       </section>
       <figure className="home-image">
-        <div className="img_border" />
         <img src="/foto-pessoal.jpg" alt="foto de perfil" />
       </figure>
     </main>
