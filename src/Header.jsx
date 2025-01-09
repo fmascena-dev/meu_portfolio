@@ -15,7 +15,8 @@ export default function Header() {
         setScrolled(false);
       }
 
-      const sections = ['home', 'technologies', 'project', 'contact', 'about'];
+      // Atualiza o item do menu com base na seção visível
+      const sections = ['home', 'tecnologias', 'projetos', 'contato', 'sobre'];
       let currentSection = '';
 
       for (let id of sections) {
@@ -41,7 +42,7 @@ export default function Header() {
 
   const handleScrollSmooth = (event) => {
     event.preventDefault();
-    const targetId = event.currentTarget.getAttribute('href').slice(1);
+    const targetId = event.currentTarget.getAttribute('href').slice(1); // Remove o "#"
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
@@ -71,41 +72,41 @@ export default function Header() {
           <span>Início</span>
         </a>
         <a
-          href="#technologies"
+          href="#tecnologias"
           className={`${styles.navItem} ${
-            selected === 'technologies' ? styles.selected : ''
+            selected === 'tecnologias' ? styles.selected : ''
           }`}
-          onClick={(event) => handleMenuClick('technologies', event)}
+          onClick={(event) => handleMenuClick('tecnologias', event)}
         >
           <FaCode className={styles.icon} />
           <span>Tecnologias</span>
         </a>
         <a
-          href="#project"
+          href="#projetos"
           className={`${styles.navItem} ${
-            selected === 'project' ? styles.selected : ''
+            selected === 'projetos' ? styles.selected : ''
           }`}
-          onClick={(event) => handleMenuClick('project', event)}
+          onClick={(event) => handleMenuClick('projetos', event)}
         >
           <FaLaptopCode className={styles.icon} />
           <span>Projetos</span>
         </a>
         <a
-          href="#contact"
+          href="#contato"
           className={`${styles.navItem} ${
-            selected === 'contact' ? styles.selected : ''
+            selected === 'contato' ? styles.selected : ''
           }`}
-          onClick={(event) => handleMenuClick('contact', event)}
+          onClick={(event) => handleMenuClick('contato', event)}
         >
           <MdContactMail className={styles.icon} />
           <span>Contato</span>
         </a>
         <a
-          href="#about"
+          href="#sobre"
           className={`${styles.navItem} ${
-            selected === 'about' ? styles.selected : ''
+            selected === 'sobre' ? styles.selected : ''
           }`}
-          onClick={(event) => handleMenuClick('about', event)}
+          onClick={(event) => handleMenuClick('sobre', event)}
         >
           <FaUserTie className={styles.icon} />
           <span>Sobre Mim</span>

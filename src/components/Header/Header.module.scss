@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  background-color: #212121;
+  position: relative;
+  z-index: 20;
+}
+
+.nav {
+  display: flex;
+  z-index: 10;
+  gap: 15px;
+  border: 1px solid #666;
+  background: #212121;
+  border-radius: 2rem;
+  padding: 0.25rem;
+  transition: all 1s ease-in-out;
+
+  &.navScrolled {
+    position: fixed;
+    top: 50%;
+    right: 1%;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem 0.2rem;
+    border-radius: 1rem;
+    transform: translateY(-50%);
+    transition: all 1s ease-in-out;
+
+    span {
+      display: none;
+      transition: all 1s ease-in-out;
+      z-index: 10;
+      background: transparent;
+    }
+
+    &:hover {
+      padding: 1rem 0.2rem;
+      span {
+        display: flex;
+        
+      }
+    }
+  }
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  &.selected {
+    background: rgba(0, 255, 255, 0.4);
+    border-color: rgba(0, 255, 255, 0.8);
+    color: #f2f2f2;
+  }
+
+  span {
+    background: transparent;
+  }
+
+  .icon {
+    font-size: 1rem;
+    background: transparent;
+  }
+}
