@@ -1,11 +1,19 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.scss';
-import { FaHome, FaLaptopCode, FaCode, FaUserTie } from 'react-icons/fa';
+import {
+  FaHome,
+  FaLaptopCode,
+  FaCode,
+  FaUserTie,
+  FaBars,
+  FaTimes,
+} from 'react-icons/fa';
 import { MdContactMail } from 'react-icons/md';
 
 export default function Header() {
   const [selected, setSelected] = useState('home'); // Menu selecionado
   const [scrolled, setScrolled] = useState(false); // Estado do scroll
+  const [menuOpen, setMenuOpen] = useState(false); // Controle do menu hamburguer
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,11 +63,21 @@ export default function Header() {
   const handleMenuClick = (menu, event) => {
     setSelected(menu);
     handleScrollSmooth(event);
+    setMenuOpen(false); // Fecha o menu após o clique
   };
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-      <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
+      <button className={styles.menuButton} onClick={toggleMenu}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+      <nav
+        className={`${styles.nav} ${menuOpen ? styles.open : ''} ${
+          scrolled ? styles.navScrolled : ''
+        }`}
+      >
         <a
           href="#home"
           className={`${styles.navItem} ${

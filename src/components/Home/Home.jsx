@@ -2,6 +2,7 @@ import { MdDownload } from 'react-icons/md';
 import './HomeStyles.scss';
 import { TbWorldShare } from 'react-icons/tb';
 import Button from '../Button/Button';
+import 'animate.css';
 
 export default function Home() {
   return (

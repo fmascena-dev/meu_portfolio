@@ -16,13 +16,14 @@ Button.defaultProps = {
 
 export default function Button({ text, icon: Icon, onClick, className = '' }) {
   return (
-    <section className={`btn ${className}`}>
-      <button className="button" onClick={onClick}>
-        <div className="btn_border" />
-        {Icon && <Icon className="btn-icon" />}
-        <span className="text_button">{text}</span>
-      </button>
-    </section>
+    <>
+      <section className={`btn ${className}`}>
+        <button className="button" onClick={onClick}>
+          <div className="btn_border" />
+          {Icon && <Icon className="btn-icon" />}
+          <span className="text_button">{text}</span>
+        </button>
+      </section>
+    </>
   );
 }
-

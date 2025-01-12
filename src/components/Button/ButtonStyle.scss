@@ -1,5 +1,6 @@
 .btn {
   padding: 2rem;
+  background-color: transparent;
 
   .button {
     --black-700: rgb(11, 11, 11);
@@ -52,14 +53,14 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 217, 255, 0.3);
+    background-color: rgba(0, 255, 255, 0.3);
     background-image: radial-gradient(
         at 51% 89%,
-        rgba(0, 217, 255, 0.5) 0px,
+        rgba(0, 255, 255, 0.5) 0px,
         transparent 50%
       ),
-      radial-gradient(at 100% 100%, rgba(0, 217, 255, 0.5) 0px, transparent 50%),
-      radial-gradient(at 22% 91%, rgba(0, 217, 255, 0.5) 0px, transparent 50%);
+      radial-gradient(at 100% 100%, rgba(0, 255, 255, 0.5) 0px, transparent 50%),
+      radial-gradient(at 22% 91%, rgba(0, 255, 255, 0.5) 0px, transparent 50%);
     background-position: top;
     opacity: var(--active, 0);
     border-radius: var(--border_radius);
