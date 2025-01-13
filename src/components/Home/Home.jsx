@@ -7,6 +7,7 @@ import 'animate.css';
 export default function Home() {
   return (
     <main id="home">
+      <section className='home-section'>
       <section>
         <div className="home-description">
           <h2>Olá, eu sou</h2>
@@ -29,6 +30,8 @@ export default function Home() {
       <figure className="home-image">
         <img src="/foto-pessoal.jpg" alt="foto de perfil" />
       </figure>
+      </section>
+      <hr />
     </main>
   );
 }

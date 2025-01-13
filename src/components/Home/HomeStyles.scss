@@ -1,8 +1,20 @@
 #home {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-around;
-  padding: 3rem 4rem;
+  padding: 2rem;
+}
+.home-section {
+  padding: 2rem 4rem 0rem 4rem;
+  display: flex;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid rgba(0, 255, 255, 0.2);
+  margin-top: 3rem;
 }
 
 .home-description {

@@ -63,11 +63,18 @@ export default function Technologies() {
         {tech.map((item, index) => (
           <div key={index} className="card" data-aos="zoom-in-up">
             <div className="content">
-              <div className="img-card" data-aos="flip-down">
+              <div
+                className="img-card"
+                data-aos="flip-down"
+                data-aos-duration="2000"
+              >
                 {item.logo()}
               </div>
               <div className="description-card">
-                <p className="title" data-aos="fade-up-left">
+                <p
+                  className="title"
+                  data-aos="fade-up-left"
+                >
                   {item.name}
                 </p>
               </div>
@@ -75,6 +82,7 @@ export default function Technologies() {
           </div>
         ))}
       </div>
+      <hr />
     </section>
   );
 }

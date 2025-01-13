@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 0rem;
   gap: 2rem;
-  padding: 2rem 5rem;
   color: #e1e1e1;
-
+  padding: 2rem;
+  
   h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-  }
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
 }
 
 .project-container {
+    padding: 0rem 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -77,14 +77,14 @@
 
     h3 {
       font-size: 1.6rem;
-      color: rgba(0, 225, 225, 1);
+      color: #e1e1e1;
       z-index: 1;
       background: transparent;
     }
 
     p {
       font-size: 1.1rem;
-      color: rgba(0, 225, 225, 0.5);
+      color: rgba(225, 225, 225, 0.6);
       z-index: 1;
       background: transparent;
     }
